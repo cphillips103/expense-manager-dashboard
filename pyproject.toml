@@ -1,0 +1,14 @@
+[project]
+name = "submission-frontend"
+version = "0.1.0"
+description = "Manager Dashboard Service for Expense Agent"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+    "google-adk[gcp]>=2.0.0,<3.0.0",
+    "google-cloud-aiplatform>=1.156.0",
+]
+requires-python = ">=3.11,<3.12"
+
+[tool.uv]
+package = false
