@@ -65,8 +65,8 @@ The service reads the following environment variables:
 2. **Configure Environment Variables**:
    Set the GCP project ID and your reasoning engine ID:
    ```bash
-   $env:GOOGLE_CLOUD_PROJECT="project-ac527b43-31fd-4a42-8dd"
-   $env:AGENT_RUNTIME_ID="3523327836603547648"
+   $env:GOOGLE_CLOUD_PROJECT="<YOUR_GCP_PROJECT_ID>"
+   $env:AGENT_RUNTIME_ID="<YOUR_AGENT_RUNTIME_ID>"
    ```
 
 3. **Start the Local Server**:
@@ -90,9 +90,10 @@ To deploy it:
      --source=. \
      --region=us-east1 \
      --allow-unauthenticated \
-     --set-env-vars="GOOGLE_CLOUD_PROJECT=project-ac527b43-31fd-4a42-8dd,AGENT_RUNTIME_ID=3523327836603547648"
+     --set-env-vars="GOOGLE_CLOUD_PROJECT=<YOUR_GCP_PROJECT_ID>,AGENT_RUNTIME_ID=<YOUR_AGENT_RUNTIME_ID>"
    ```
 
 ### IAM Permissions Reference
 For the deployed service to query Vertex AI sessions, the Cloud Run service identity (e.g., Default Compute Engine Service Account) requires:
 * **Vertex AI Administrator** (`roles/aiplatform.admin`) or **Vertex AI User** (`roles/aiplatform.user`) containing the `aiplatform.sessions.list` and `aiplatform.reasoningEngines.get` permissions.
+
